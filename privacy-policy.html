@@ -3,27 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kahvaltı oyununun yerel oyun verileri, isteğe bağlı Firebase analizi ve gizlilik tercihleri hakkında bilgi.">
   <title>Kahvaltı — Gizlilik Politikası</title>
   <style>
-    body { max-width: 720px; margin: 0 auto; padding: 36px 22px 70px; font: 17px/1.7 system-ui, sans-serif; color: #35251e; background: #fffaf2; }
-    h1, h2 { line-height: 1.25; } h1 { font-size: 2.2rem; } h2 { margin-top: 2rem; font-size: 1.25rem; } a { color: #80502f; }
+    * { box-sizing: border-box; }
+    body { max-width: 760px; margin: 0 auto; padding: 36px 22px 70px; font: 17px/1.7 system-ui, sans-serif; color: #35251e; background: #fffaf2; }
+    h1, h2 { line-height: 1.25; } h1 { font-size: 2.2rem; } h2 { margin-top: 2rem; font-size: 1.25rem; }
+    a { color: #80502f; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .summary { padding: 16px 20px; border-left: 4px solid #80502f; background: #f3e8d9; border-radius: 4px; }
+    li { margin-bottom: .5rem; }
+    @media (max-width: 480px) { body { padding: 24px 18px 48px; } h1 { font-size: 1.85rem; } }
   </style>
 </head>
 <body>
   <main>
     <h1>Gizlilik Politikası</h1>
-    <p><strong>Kahvaltı · Curipix</strong><br>Son güncelleme: 17 Kasım 2026</p>
-    <p>Bu politika, Curipix tarafından sunulan Kahvaltı oyununun Google Play için hazırlanan Android sürümünde verilerin nasıl işlendiğini açıklar.</p>
-    <h2>Cihazınızda saklanan veriler</h2>
-    <p>Oyun; tarifler, puanlar, oyun tercihleri ve öğretici ilerlemesi gibi bilgileri cihazınızda saklar. Ayrıca oyun oturumları, kontrol modu ve oyun içi ilerleme gibi olayların son 256 kaydını zaman bilgileriyle birlikte yerel olarak tutar. Yeni kayıtlar en eskilerinin yerini alır.</p>
-    <h2>Verilerin kullanımı ve paylaşımı</h2>
-    <p>Bu bilgiler oyunun ilerlemenizi ve tercihlerinizi hatırlaması için kullanılır. Bu sürümde oyun bu kayıtları Curipix'e veya üçüncü taraflara göndermez. Oyunda hesap oluşturma, reklam ve uygulama içi satın alma bulunmaz.</p>
-    <h2>Saklama ve silme</h2>
-    <p>Yerel bilgiler, silinene veya uygulama verileri temizlenene kadar cihazınızda kalır. Android'de Ayarlar → Uygulamalar → Kahvaltı → Depolama → Verileri temizle yolunu kullanabilirsiniz. Adımlar cihazınıza göre değişebilir. Bu işlem oyun ilerlemenizi de siler.</p>
-    <h2>Değişiklikler</h2>
-    <p>Oyunun veri işleme biçimi değişirse bu politika güncellenir. Güncel sürüm bu sayfada yayınlanır.</p>
-    <h2>İletişim</h2>
-    <p>Gizlilik sorularınız için <a href="mailto:emre95@gmail.com">emre95@gmail.com</a> adresine yazabilirsiniz.</p>
+    <p><strong>Kahvaltı — Curipix</strong><br>Son güncelleme: <time datetime="2026-11-19">19 Kasım 2026</time></p>
+    <p>Bu politika, Curipix tarafından sunulan Kahvaltı oyununun Android sürümünde verilerin nasıl işlendiğini açıklar. Gizlilik konusunda sorumlu geliştiriciye <a href="mailto:emre95@gmail.com">emre95@gmail.com</a> adresinden ulaşabilirsiniz.</p>
+    <p class="summary"><strong>Tercih sizin:</strong> Oyunu analiz izni vermeden oynayabilirsiniz. Oyun analizi varsayılan olarak kapalıdır; yalnızca izin verdiğinizde etkinleşir. İzninizi oyun içindeki gizlilik ekranından değiştirebilirsiniz.</p>
+
+    <h2>1. Cihazınızda saklanan bilgiler</h2>
+    <p>Oyun ilerlemesi, keşfedilen tarifler, puanlar, oyun içi kazanımlar, öğretici ilerlemesi, ses ve görünüm tercihleri ile analiz izni tercihiniz cihazınızda saklanır. Bu bilgiler oyunun ilerlemenizi ve ayarlarınızı hatırlamasını sağlar.</p>
+    <p>Oyun ayrıca zaman bilgileri, kontrol modu ve oyun içi ilerleme gibi bilgileri içeren son 256 olay kaydını cihazınızda yerel olarak tutar. Yeni kayıtlar en eski kayıtların yerini alır. Bu yerel kayıtlar analiz izninden bağımsızdır; analiz izni vermediğinizde Firebase Analytics'e oyun olayı gönderilmez.</p>
+
+    <h2>2. İzin verirseniz toplanan analiz verileri</h2>
+    <p>Oyuncuların nerede zorlandığını anlamak, oyun dengesini ve kullanım deneyimini geliştirmek için Google Analytics for Firebase kullanırız. İzin verdiğinizde şu bilgiler işlenebilir:</p>
+    <ul>
+      <li><strong>Oyun etkileşimleri:</strong> Oturum ve tur başlangıçları ile bitişleri, oyun süresi, puan, tarif ilerlemesi, toplanan veya kaybedilen harfler, tamamlanan kelimeler, hareket ve hata sayıları, engel etkileşimleri, ödüller, öğretici adımları, ekran geçişleri ve ayar değişiklikleri.</li>
+      <li><strong>Teknik bilgiler:</strong> Uygulama sürümü, cihaz modeli, işletim sistemi ve dil gibi uygulama ve cihaz bilgileri.</li>
+      <li><strong>Tanımlayıcılar:</strong> Oyun oturumu ve tur kimlikleri ile Firebase'in bir uygulama kurulumunu ayırt etmek için kullandığı uygulama örneği kimliği. Bu kimlik, tekrar ziyaretlerin anlaşılmasına yardımcı olur; veriler tamamen anonim kabul edilmemelidir.</li>
+      <li><strong>Yaklaşık konum:</strong> Google Analytics, bağlantının IP adresinden ülke veya şehir düzeyinde yaklaşık konum türetebilir. Google Analytics IP adreslerini kaydetmediğini veya saklamadığını belirtir. Oyun GPS konumunuzu istemez.</li>
+    </ul>
+    <p>Oyun analizine adınız, e-posta adresiniz veya telefon numaranız eklenmez. Reklam kimliği toplama ve reklam kişiselleştirme kapalıdır. Oyunun mevcut sürümünde hesap oluşturma, reklam veya uygulama içi satın alma bulunmaz.</p>
+
+    <h2>3. Hizmet sağlayıcılar ve verilerin kullanımı</h2>
+    <p>İzin verdiğiniz analiz verileri, ölçüm ve raporlama hizmeti sunan Google Firebase altyapısına gönderilir; Curipix bu raporları oyunu geliştirmek için kullanır.</p>
+    <p>Analize izin verdiğinizde Firebase Remote Config de oyun yapılandırmasını, örneğin kontrol modunu, almak için kullanılabilir. Bu hizmet uygulama kurulum tanımlayıcıları ile uygulama ve cihaz bilgilerini işleyebilir.</p>
+    <p>Google hizmetleri verileri bulunduğunuz ülke dışındaki sunucularda işleyebilir. Hizmet sağlayıcının veri işleme uygulamaları için <a href="https://firebase.google.com/support/privacy">Firebase Gizlilik ve Güvenlik</a>, <a href="https://support.google.com/analytics/answer/6004245?hl=tr">Google Analytics veri koruma açıklaması</a> ve <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a> sayfalarını inceleyebilirsiniz.</p>
+
+    <h2>4. İzin verme ve izni geri çekme</h2>
+    <p>İlk açılıştaki analiz seçeneğini reddedebilir ve oyuna devam edebilirsiniz. Daha sonra oyun içindeki gizlilik ekranında bulunan <strong>“Oyun analizi”</strong> seçeneğinden tercihinizi değiştirebilirsiniz.</p>
+    <p>Analizi kapatmanız yeni analiz gönderimlerini durdurur, gönderilmeyi bekleyen uygulama olaylarını temizler ve cihazdaki Firebase Analytics verileri ile uygulama örneği kimliğini sıfırlar. Bu işlem oyun ilerlemenizi silmez ve daha önce Google'a gönderilmiş verileri otomatik olarak silmez.</p>
+
+    <h2>5. Saklama ve silme</h2>
+    <p>Yerel ilerleme ve tercihler, siz silene veya uygulama verilerini temizleyene kadar cihazınızda kalır. Yerel olay geçmişi en fazla 256 kayıtla sınırlıdır. Android'de <strong>Ayarlar → Uygulamalar → Kahvaltı → Depolama → Verileri temizle</strong> yolunu kullanabilirsiniz; adımlar cihazınıza göre değişebilir. <strong>Bu işlem oyun ilerlemenizi ve tercihlerinizi de siler.</strong></p>
+    <p>Sunucuya gönderilen analiz verilerinin saklanması ve silinmesi, Google Analytics mülkündeki veri saklama ayarlarına ve Google'ın ilgili hizmet politikalarına bağlıdır. Toplu istatistik raporlarının saklanması, tekil kullanıcı ve olay verilerinden farklı olabilir. Uygulama verilerini cihazınızdan silmeniz sunucudaki geçmiş kayıtları silmez.</p>
+    <p>Verilerinize erişim, düzeltme veya silme talepleriniz için <a href="mailto:emre95@gmail.com">emre95@gmail.com</a> adresine yazabilirsiniz. Oyunda hesap bulunmadığı için belirli analiz kayıtlarını sizinle ilişkilendirmek her zaman mümkün olmayabilir; talebinizi değerlendirmek için gerekli bilgileri sizinle netleştiririz. Bize e-posta gönderirseniz adresinizi ve mesajınızı talebinize yanıt vermek amacıyla işleriz.</p>
+
+    <h2>6. Politika değişiklikleri</h2>
+    <p>Oyunun veri işleme biçimi değişirse bu politika güncellenir ve güncelleme tarihi bu sayfada belirtilir. Bu metindeki isteğe bağlı Firebase analizi açıklamaları, analiz özelliğinin bulunduğu sürümler için geçerlidir; önceki çevrimdışı sürümlere bu özellik geriye dönük olarak eklenmez.</p>
+
+    <h2>7. İletişim</h2>
+    <p><strong>Curipix — Kahvaltı</strong><br>Gizlilik soruları ve veri talepleri: <a href="mailto:emre95@gmail.com">emre95@gmail.com</a></p>
   </main>
 </body>
 </html>
